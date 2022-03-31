@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 const Trending = () => {
   const [content, setContent] = useState([]);
 
-  const FetchTrending = async () => {
+  const fetchTrending = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/trending/all/week?api_key${process.env.REACT_APP_API_KEY}`
+      `https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}`
     );
 
     console.log(data);
@@ -15,13 +15,19 @@ const Trending = () => {
   };
 
     useEffect(() => {
-      FetchTrending();
+      fetchTrending();
     }, [])
 
   return (
     <div>
       <span className="pageTitle">Trending</span>
-      <div className="trending"></div>
+      <div className="trending">
+        {
+          content && content.map((c) => {
+            console.log(c)
+          })
+        }
+      </div>
     </div>
   );
 };
