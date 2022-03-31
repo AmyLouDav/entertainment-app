@@ -1,7 +1,7 @@
 import { Container } from "@mui/material"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 import SimpleBottomNavigation from './Components/MainNav';
 import Search from './Pages/Search/Search';
 import Movies from './Pages/Movies/Movies';
