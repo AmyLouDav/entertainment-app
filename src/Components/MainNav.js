@@ -21,16 +21,15 @@ export default function SimpleBottomNavigation() {
   }, [value, history]);
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        position: "fixed",
-        bottom: 0,
-        backgroundColor: "#2d313a",
-        zIndex: 100,
-      }}
-    >
+    <Box>
       <BottomNavigation
+        sx={{
+          width: "100%",
+          position: "fixed",
+          bottom: 0,
+          backgroundColor: "#2d313a",
+          zIndex: 100,
+        }}
         showLabels
         value={value}
         onChange={(event, newValue) => {
