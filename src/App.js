@@ -17,9 +17,9 @@ function App() {
         <Container>
           <Routes>
             <Route path='/' element={ <Trending/> } exact />
-            <Route path='/movies' element={Movies} />
-            <Route path='/series' element={Series} />
-            <Route path='/search' element={Search} />
+            <Route path='/movies' element={ <Movies/> } />
+            <Route path='/series' element={ <Series/> } />
+            <Route path='/search' element={ <Search/> } />
           </Routes>
         </Container>
       </div>
