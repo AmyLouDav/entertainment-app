@@ -2,11 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CustomPagination from "../../Components/Pagination/CustomPagination";
 import SingleContent from "../../Components/SingleContent/SingleContent";
+import Genres from "../../Components/Genres/Genres";
 
 const Movies = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
+  const [selectedGenres, setSelectedGenres] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   const fetchMovies = async () => {
     const { data } = await axios.get(
@@ -24,6 +27,14 @@ const Movies = () => {
   return (
     <div>
       <span className="pageTitle">Movies</span>
+      <Genres
+        type="movie"
+        selectedGenres={selectedGenres}
+        setSelectedGenres={setSelectedGenres}
+        genres={genres}
+        setGenres={setGenres}
+        setPage={setPage}
+      />
       <div className="trending">
         {content &&
           content.map((c) => (

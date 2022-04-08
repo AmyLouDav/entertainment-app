@@ -1,11 +1,10 @@
 import { Pagination } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "../Pagination/CustomPagination.css";
-import { dark } from "@mui/material/styles/createPalette";
 
 const darkTheme = createTheme({
   palette: {
-    type: dark,
+    type: "dark",
   },
 });
 
