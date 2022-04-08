@@ -49,10 +49,12 @@ const Genres = ({
           <Chip
             label={genre.name}
             className="single-genre"
-            clickable
             size="small"
-            key={genre.id}
             color="primary"
+            key={genre.id}
+                clickable
+                onDelete={()=>handleRemove(genre)}
+            
           />
         ))}
       {genres &&
